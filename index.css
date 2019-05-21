@@ -1,0 +1,42 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#content {
+	text-align: center;
+}
+
+#instructions,
+#ppm,
+#time {
+	position: relative;
+	top: 100px;
+	font-family: 'Roboto';
+	font-weight: 200;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	width: 100vw;
+}
+
+#ppm {
+	position: absolute;
+	left: 0;
+	top: 300px;
+	font-size: 60px;
+}
+
+#time {
+	top: 300px;
+	color: rgba(0, 0, 0, 0.2);
+	font-size: 200px;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
