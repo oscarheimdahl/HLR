@@ -2,7 +2,7 @@ let started = false;
 let time = 0;
 let startTime = 0;
 let presses = 0;
-let showClock = true;
+let showClock = false;
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
 	canvas.parent('p5');
