@@ -6,11 +6,11 @@ let showClock = false;
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
 	canvas.parent('p5');
-	background(100, 0, 0);
+	// background(100, 0, 0);
 }
 
 function draw() {
-	background(200, 0, 0, 4);
+	// background(200, 0, 0, 4);
 	if (started) {
 		let seconds = Math.round((Date.now() - startTime) / 1000);
 		$('#time')
@@ -22,6 +22,8 @@ function draw() {
 function windowResized() {
 	createCanvas(windowWidth, windowHeight);
 	background(100, 0, 0);
+	$('img').css('left', 'calc(50vw - 200px)');
+	$('img').css('top', 'calc(50vh - 170px)');
 }
 
 function keyPressed() {
@@ -33,7 +35,14 @@ function keyPressed() {
 			startTime = Date.now();
 			started = true;
 			loop();
+			$('#content').css('background', 'rgb(44, 133, 157)');
+			$('#ppm').css('color', '#888');
 		}
+		$('img')
+			.animate({ width: '410px', left: '-=5', top: '-=5' }, 100)
+			.delay(10)
+			.animate({ width: '400px', left: '+=5', top: '+=5' }, 100);
+
 		presses++;
 	}
 	if (keyCode === 13 && started) {
@@ -42,8 +51,11 @@ function keyPressed() {
 		let minutes = time / 60000;
 		let ppm = Math.round((presses / minutes) * 10) / 10;
 		if (ppm < 120 && ppm > 100) {
-			background(0, 120, 0);
-			noLoop();
+			$('img')
+				.animate({ width: '450px', left: '-=25', top: '-=25' }, 700)
+				.delay(10)
+				.animate({ width: '400px', left: '+=25', top: '+=25' }, 700);
+			$('#ppm').css('color', 'white');
 		}
 		$('#ppm')
 			.empty()
