@@ -53,7 +53,7 @@ function keyPressed() {
 	}
 	if (keyCode === 75) {
 		if (showClock) $('#time').css('display', 'none');
-		else $('#time').css('display', 'initial');
+		else $('#time').css('display', 'inline-block');
 		showClock = !showClock;
 	}
 }
