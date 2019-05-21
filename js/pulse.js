@@ -36,7 +36,7 @@ function keyPressed() {
 		}
 		presses++;
 	}
-	if (keyCode === 13) {
+	if (keyCode === 13 && started) {
 		started = false;
 		time = Date.now() - startTime;
 		let minutes = time / 60000;
