@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
 	background(200, 0, 0, 4);
-	if (started && showClock) {
+	if (started) {
 		let seconds = Math.round((Date.now() - startTime) / 1000);
 		$('#time')
 			.empty()
@@ -47,7 +47,7 @@ function keyPressed() {
 		}
 		$('#ppm')
 			.empty()
-			.append(ppm);
+			.append(ppm + '<span id="ppm-text"><br />komprisioner per minut</span>');
 		console.log('Presses/min: ' + ppm);
 		presses = 0;
 	}

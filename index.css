@@ -4,33 +4,47 @@
 }
 
 #content {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
 	text-align: center;
+	font-family: 'Baloo Bhai';
+	overflow: hidden;
 }
 
 #instructions,
-#ppm,
-#time {
+#ppm {
 	position: relative;
-	top: 100px;
-	font-family: 'Roboto';
+	top: 50px;
 	font-weight: 200;
 	color: white;
-	display: inline-block;
 	text-align: center;
 	width: 100vw;
+	font-size: 30px;
 }
 
 #ppm {
 	position: absolute;
 	left: 0;
 	top: 300px;
-	font-size: 60px;
+	font-size: 100px;
+}
+
+#ppm-text {
+	position: relative;
+	top: -110px;
+	font-size: 20px;
 }
 
 #time {
-	top: 300px;
+	position: absolute;
+	width: 100vw;
+	left: 0;
+	height: 100vh;
+	line-height: 120vh;
+	bottom: 0;
 	color: rgba(0, 0, 0, 0.2);
-	font-size: 200px;
+	font-size: calc(200px + 20vw);
 	display: none;
 }
 
