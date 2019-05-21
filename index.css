@@ -10,18 +10,30 @@
 	text-align: center;
 	font-family: 'Baloo Bhai';
 	overflow: hidden;
-	background: rgb(44, 133, 157);
+	/* background: rgb(44, 133, 157); */
+	background: transparent;
+	color: white;
+
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
-#instructions,
 #ppm {
 	position: relative;
-	top: 50px;
+	top: 20px;
 	font-weight: 200;
-	color: white;
 	text-align: center;
 	width: 100vw;
 	font-size: 30px;
+}
+
+#instructions {
+	display: none;
+	position: absolute;
+	right: 80px;
+	top: 30px;
 }
 
 #ppm {
@@ -44,9 +56,19 @@
 	height: 70vh;
 	line-height: 120vh;
 	bottom: 0;
-	color: white;
 	font-size: calc(60px + 5vw);
 	display: none;
+}
+
+#i {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-size: 80px;
+	z-index: 2;
+	cursor: pointer;
+	width: 60px;
+	text-align: right;
 }
 
 img {
